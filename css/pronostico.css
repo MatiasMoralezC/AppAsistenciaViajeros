@@ -1,0 +1,223 @@
+.forecast-main-container {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.left-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 80%;
+    min-width: 60%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .left-block {
+
+        flex-direction: column;
+
+    }
+}
+
+.sun-container {
+    min-width: 300px;
+    /* border: 2px solid red; */
+    padding: 5%;
+    display: flex;
+}
+
+.sun-container img {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.location {
+    margin-bottom: 8%;
+    font-size: 30px;
+}
+
+.forecast-info {
+    /*  border: 2px solid orange; */
+    padding: 5%;
+}
+
+.forecast-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forecast-detail-item {
+    display: flex;
+    font-weight: bold;
+}
+
+.forecast-detail-item p {
+    margin-left: 3%;
+    font-weight: 300;
+}
+
+.extend-forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 100%;
+    margin: 0 auto;
+    gap: 5%;
+}
+
+@media (max-width: 600px) {
+    .extend-forecast-container {
+
+        flex-direction: column;
+
+    }
+}
+
+.forecast-extend-item {
+    min-height: 150px;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+}
+
+.forecast-detail-item-date {
+    text-align: center;
+    color: rgb(106, 106, 138);
+}
+
+.forecast-inner-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-self: center;
+    padding: 10%;
+    font-size: 30px;
+    min-height: 50%;
+    -webkit-box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    transition: all .4s ease-out;
+}
+
+.forecast-inner-item:hover {
+    transform: scale(1.1);
+    transition: all .4s ease-out;
+}
+
+.forecast-extend-title {
+    text-align: center;
+    font-size: 2px;
+    position: relative;
+    top: 30px;
+}
+
+.alerts-title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.alerts-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-item {
+    transform: scale(.9);
+    width: 80%;
+    -webkit-box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 17px -3px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    height: 100%;
+    padding: 3%;
+
+    transition: all .4s ease-out;
+}
+
+.alert-item:hover {
+    transform: scale(.92);
+    transition: all .4s ease-out;
+
+}
+
+.alert-item p {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 35px;
+    font-style: italic;
+    line-height: 1.8vw;
+
+}
+
+@media (max-width: 600px) {
+    .alert-item p {
+        line-height: 1.1rem;
+    }
+}
+
+.date-and-hour-alert {
+    padding-bottom: 1%;
+    font-size: 27px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.alert-subtitle {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.bntClima {
+    font-size: 1rem;
+    border-radius: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.bntClima:hover {
+    background-color: rgba(255, 143, 0, 0.37);
+    transition: .5s;
+}
+
+.contenedor {
+    padding: 1rem;
+    text-align: center;
+    width: 50%;
+    -webkit-box-shadow: 1px 4px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 4px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.info-day {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-day span {
+    color: rgb(196, 132, 13);
+    margin-bottom: 10px;
+}
+
+.info-day p {
+    color: black;
+    margin-bottom: 10px;
+
+}
+
+

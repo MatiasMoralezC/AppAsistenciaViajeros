@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear planta</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/crearPlanta.css">
+  <link rel="stylesheet" href="../css/plantaNueva.css"
+</head>
+<body>
+
+  <header class="header-container">
+    <h1 class="header-title">Turismo Regional</h1>
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./comercios.html">Comercios</a></li>
+        <li><a href="./sucursales.html">Sucursales</a></li>
+        <li><a href="./pronostico.html">Pronostico</a></li>
+        <li><a href="./crearPlanta.html">Registrar Planta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h2 class="titulosSeccion" id="register-plant-title" >Registrar planta</h2>
+  <main>
+  
+    <form class="register-plant-form-container" id="register-plant-form" onsubmit="return false;" > 
+      <span style="display:flex; justify-content: space-between;">
+        <label for="family">Familia</label>
+        <a href="#" id="add-new-family">Agregar Familia</a>
+      </span>
+      <select name="family" id="family">
+      </select>
+  
+      
+      <label for="commonName">Nombre comun</label>
+      <input type="text" id="commonName" name="commonName" />
+
+      <label>Ubicacion:</label>
+
+      <label for="section">Seccion</label>
+      <select name="section" id="section">
+        <option value="section 1">section 1</option>
+        <option value="section 2">section 2</option>
+        <option value="section 3">section 3</option>
+        <option value="section 4">section 4</option>
+      </select>
+
+      <label for="row">Fila</label>
+      <input type="number" id="row" name="row"/>
+
+      <label for="row">Columna</label>
+      <input type="number" id="column" name="column"/>
+    
+      <label for="image">Imagen</label>
+      <input type="file" id="image" name="image" accept="image/png, image/jpg, image/jpeg"/>
+      <div id="display-image"></div>
+      
+      <button type="submit" class="submit-button-plant" id="new-plant-submit">Guardar</button>
+    </form>
+    
+
+
+    <form class="register-family-form-container" id="register-family-form" onsubmit="return false;" > 
+      <img src="../img/backArrow.svg" class="back-arrow" id="back-arrow"/>
+      <label for="newFamilyFamily">Nueva familia</label>
+      <input type="text" id="newFamilyFamily" name="newFamilyFamily" />
+      
+      <label for="familyScientificName">Nombre cientifico</label>
+      <input type="text" id="familyScientificName" name="familyScientificName" />
+
+      <label for="familyMainColor">Color principal</label>
+      <input type="text" id="familyMainColor" name="familyMainColor" />
+
+  
+      <label for="typeOfSoil">Tipo de suelo</label>
+      <select name="typeOfSoil" id="typeOfSoil">
+        <option value="acido">Ácido</option>
+        <option value="neutro">Neutro</option>
+        <option value="basico">Básico</option>
+      </select>
+
+      <label for="tempeture">Temperatura</label>
+      <input type="number" id="tempeture" name="tempeture"/>
+
+      <label for="irrigationCycle">Riego</label>
+      <select name="irrigationCycle" id="irrigationCycle">
+        <option value="mucho">Mucho</option>
+        <option value="mediano">Mediano</option>
+        <option value="poco">Poco</option>
+      </select>
+      <button type="submit" class="submit-button-plant" id="new-family-submit">Guardar</button>
+    </form>
+  </main>
+
+
+
+  <main class="new-plant-container" id="new-plant-card">
+    <div class="new-plant-inner-container">
+      <img src="/img/limonero.jpeg" class="new-plant-image" id="new-plant-image"/>
+      <div class="details-container">
+          <p class="new-plant-family" id="new-plant-family">Familia : </p>
+          <p class="new-plant-common-name" id="new-plant-common-name">Nombre comun : </p>
+          <br>
+          <p>Ubicacion</p>
+          <br>
+          <p class="new-plant-section" id="new-plant-section">Seccion : </p>
+          <p class="new-plant-section-row" id="new-plant-section-row">Fila : </p>
+          <p class="new-plant-section-clomun" id="new-plant-section-column">Columna : </p>
+      </div>
+    </div>
+</main>
+
+<script src="../js/plantaNueva.js"></script>
+
+
+
+  <footer class="footer-container">
+    <span class="footer-social-media">
+      <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon"/>
+      <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon"/>
+    </span>
+    <h6 class="copyright-footer">© 2022 Copyright: Grupo 7 </h6>
+  </footer>
+  
+
+  
+  <script src="./../js/plants.js"></script>
+  <script src="./../js/Util.js"></script>
+  <script src="../js/crearPlanta.js"></script>
+</body>
+</html>
