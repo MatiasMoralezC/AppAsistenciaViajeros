@@ -1,0 +1,70 @@
+html{
+    font-size: 1.4rem;
+ }
+.register-plant-title {
+    font-size: 32px;
+    text-align: center;
+    padding: 2%;
+}
+
+.register-plant-form-container, .register-family-form-container {
+    display: flex;
+    flex-direction:  column;
+    max-width: 70%;
+    margin: 0 auto;
+    gap: 10px;
+    padding-bottom: 10%;
+}
+.register-family-form-container {
+    display: none;
+}
+.register-plant-form-container label {
+    font-weight: 800;
+}
+.register-plant-form-container input {
+    min-height: 20px;
+    border-radius: 2px;
+}
+select{
+    padding: .5rem 0;
+}
+
+#display-image{
+    display: none;
+    width: 400px;
+    height: 225px;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+.submit-button-plant {
+    background-color: transparent;
+    border: 2px solid black;
+    min-height: 40px;
+    cursor: pointer;
+
+  }
+
+.submit-button-plant:hover {
+    transition: all .2s ease-out;
+    background-color: rgba(255, 143, 0, 0.37);
+}
+
+#add-new-family {
+    color:rgba(216, 123, 1, 0.712);
+    text-decoration: none;
+
+}
+#add-new-family:hover {
+    color:rgba(184, 159, 128, 0.712);
+}
+
+.back-arrow {
+    max-width: 30px;
+    cursor: pointer;
+}
+.back-arrow:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in;
+}

@@ -1,0 +1,59 @@
+html {
+    font-size: 1.4rem;
+}
+
+#flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {
+    #flexbox {
+        flex-direction: column;
+    }
+}
+
+#sucursalesContainer {
+    width: 20%;
+    border-style: outset;
+    border-width: 5px;
+}
+
+@media (max-width: 600px) {
+    #sucursalesContainer {
+       width: 100%;
+    }
+}
+
+#mostrarSucursales {
+    width: 17%;
+    padding: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+   
+}
+
+#mostrarSucursales:hover {
+    cursor: pointer;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     transition: all .2s ease-out;
+     background-color: rgba(255, 143, 0, 0.37);
+}
+
+#listaSucursales li button {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#listaSucursales li button:hover {
+    cursor: pointer;
+    transition: all .2s ease-out;
+background-color: rgba(255, 143, 0, 0.37);
+}
+
+.leaflet-popup-content {
+    font-size: 1rem;
+}

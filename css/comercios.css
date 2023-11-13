@@ -1,0 +1,58 @@
+html{
+   font-size: 1.4rem;
+   
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 1/1;
+    transition: 0.5s;
+    background-size:contain;
+}
+img:hover {
+    max-width: 200px;
+    max-height: 200px;
+    aspect-ratio: 1/1;
+    transition: 0.5s ;
+    cursor: pointer;
+}
+#table-catalog{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+@media (max-width: 600px) {
+    #table-catalog{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #table-catalog thead tr{
+        display: none;
+       
+    } 
+    #table-catalog tbody tr{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+  }
+.catalog-title {
+    font-size: 32px;
+    text-align: center;
+    padding: 1%;
+}
+
+
+.filter-input {
+    margin-bottom: 2%;
+  
+}
+
+.label-filter {
+    margin-left: 1%;
+}
+.util-container-landing{
+    padding: 4rem;
+}
