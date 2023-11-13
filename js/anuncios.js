@@ -1,10 +1,13 @@
 const anuncios = [
     {
         imgSrc: "../img/mexicanFlame.jpg",
-        productoNombre: "ACTINIDIACEAE",
-        comercio: "Rojo",
-        categoria: "kk",
-        url: "google.com",
+        imgSrc2: "../img/mexicanFlame.jpg",
+        imgSrc3: "../img/mexicanFlame.jpg",
+        productoNombre: "Flor roja",
+        comercio: "Floreria Bob",
+        categoria: "Botanica",
+        descripcion: "",
+        disponible: true
     },
 ]
 

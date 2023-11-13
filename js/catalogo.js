@@ -15,8 +15,8 @@ const laodCatalog = () => {
     <tr>
     <th>Imagen</th>
     <th>Producto</th>
-    <th>Categoria</th>
     <th>Comercio</th>
+    <th>Categoria</th>
     </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@ const laodCatalog = () => {
 
     anunciosToShow.forEach((anuncio, i) => {
         table = table + `<tr>
-        <td><a href="${anuncio.url}"><img class="imgAnuncios"  src="${anuncio.imgSrc}" /></a></td>
+        <td><img class="imgAnuncios"  src="${anuncio.imgSrc}" /></td>
         <td>${anuncio.productoNombre}</td>
         <td>${anuncio.comercio}</td>
         <td>${anuncio.categoria}</td>
