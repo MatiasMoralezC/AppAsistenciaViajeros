@@ -1,14 +1,14 @@
 html{
     font-size: 1.4rem;
  }
-.new-plant-container {
+.new-anuncio-container {
     display: none;
     flex-direction:column;
     padding: 5%;
     align-items: center;
 }
 
-.new-plant-inner-container {
+.new-anuncio-inner-container {
     display: flex;
     align-items: center;
     -webkit-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
@@ -19,7 +19,7 @@ html{
     gap: 50px;
 }
 
-.new-plant-image {
+.new-anuncio-image {
     max-width:200px;
     aspect-ratio: 1/1;
     margin-bottom: 2%;

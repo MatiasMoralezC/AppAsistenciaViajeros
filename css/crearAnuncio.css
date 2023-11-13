@@ -1,13 +1,13 @@
 html{
     font-size: 1.4rem;
  }
-.register-plant-title {
+.register-anuncio-title {
     font-size: 32px;
     text-align: center;
     padding: 2%;
 }
 
-.register-plant-form-container, .register-family-form-container {
+.register-anuncio-form-container, .register-family-form-container {
     display: flex;
     flex-direction:  column;
     max-width: 70%;
@@ -18,10 +18,10 @@ html{
 .register-family-form-container {
     display: none;
 }
-.register-plant-form-container label {
+.register-anuncio-form-container label {
     font-weight: 800;
 }
-.register-plant-form-container input {
+.register-anuncio-form-container input {
     min-height: 20px;
     border-radius: 2px;
 }
@@ -38,7 +38,7 @@ select{
     background-repeat: no-repeat;
   }
   
-.submit-button-plant {
+.submit-button-anuncio {
     background-color: transparent;
     border: 2px solid black;
     min-height: 40px;
@@ -46,7 +46,7 @@ select{
 
   }
 
-.submit-button-plant:hover {
+.submit-button-anuncio:hover {
     transition: all .2s ease-out;
     background-color: rgba(255, 143, 0, 0.37);
 }

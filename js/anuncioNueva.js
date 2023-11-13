@@ -1,11 +1,11 @@
 
 //title
-const title = document.getElementById('register-plant-title')
+const title = document.getElementById('register-anuncio-title')
 
 
 //Families for select
 const selectFamily = document.getElementById('family')
-const families = new Set(plants.map(plant => plant.familyName.toLowerCase()))
+const families = new Set(anuncios.map(anuncio => anuncio.categoria.toLowerCase()))
 const addOptions = () => {
     families.
     forEach(family => {
@@ -34,9 +34,9 @@ image_input.addEventListener("change", function() {
     reader.readAsDataURL(this.files[0]);
   });
 
-//Process new plant form
-const newPlantForm = document.getElementById('register-plant-form')
-const newPlantCard = document.getElementById('new-plant-card')
+//Process new anuncio form
+const newPlantForm = document.getElementById('register-anuncio-form')
+const newPlantCard = document.getElementById('new-anuncio-card')
 newPlantForm?.addEventListener('submit', (e) => {
     e.preventDefault();
     const newPlant = {
@@ -49,14 +49,14 @@ newPlantForm?.addEventListener('submit', (e) => {
     }
     newPlantCard.style.display = 'flex'
     newPlantForm.style.display= 'none'
-    title.innerHTML = "Nueva planta"
+    title.innerHTML = "Nueva anuncio"
 
-    const family = document.getElementById('new-plant-family')
-    const commonName = document.getElementById('new-plant-common-name')
-    const section = document.getElementById('new-plant-section')
-    const sectionRow = document.getElementById('new-plant-section-row')
-    const sectionColumn = document.getElementById('new-plant-section-column')
-    const image = document.getElementById('new-plant-image')
+    const family = document.getElementById('new-anuncio-family')
+    const commonName = document.getElementById('new-anuncio-common-name')
+    const section = document.getElementById('new-anuncio-section')
+    const sectionRow = document.getElementById('new-anuncio-section-row')
+    const sectionColumn = document.getElementById('new-anuncio-section-column')
+    const image = document.getElementById('new-anuncio-image')
 
     family.innerHTML = family.innerHTML + newPlant.family
     commonName.innerHTML = commonName.innerHTML + newPlant.commonName
@@ -79,7 +79,7 @@ const tempeture = document.getElementById('tempeture')
 const goToNewPlant = () => {
     newPlantForm.style.display = 'flex'
     newFamilyForm.style.display = 'none'
-    title.innerHTML = "Registrar planta"
+    title.innerHTML = "Crear anuncio"
 }
 const goToNewFamily = () => {
     newPlantForm.style.display = 'none'
@@ -111,10 +111,10 @@ newFamilyForm.addEventListener('submit', (e) => {
 })
 
 
-//Go to new plant
-/* const newPlantSubmit = document.getElementById('new-plant-submit')
+//Go to new anuncio
+/* const newPlantSubmit = document.getElementById('new-anuncio-submit')
 newPlantSubmit?.addEventListener('click', (e) => {
-    return window.location = "./../pages/plantaNueva.html"
+    return window.location = "./../pages/anuncioNueva.html"
 })
  */
 

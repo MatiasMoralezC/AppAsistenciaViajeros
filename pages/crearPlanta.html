@@ -2,32 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Crear planta</title>
+  <title>Crear anuncio</title>
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/crearPlanta.css">
-  <link rel="stylesheet" href="../css/plantaNueva.css"
+  <link rel="stylesheet" href="../css/crearAnuncio.css">
+  <link rel="stylesheet" href="../css/anuncioNueva.css"
 </head>
 <body>
 
   <header class="header-container">
-    <h1 class="header-title">Turismo Regional</h1>
+    <h1 class="header-title">Vivero Liliana</h1>
     <nav class="nav-container">
       <ul class="nav-list">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="./articulos.html">Articulos</a></li>
-        <li><a href="./comercios.html">Comercios</a></li>
+        <li><a href="./anuncios.html">Anuncios</a></li>
         <li><a href="./sucursales.html">Sucursales</a></li>
         <li><a href="./pronostico.html">Pronostico</a></li>
-        <li><a href="./crearPlanta.html">Registrar Planta</a></li>
+        <li><a href="./crearAnuncio.html">Crear Anuncio</a></li>
       </ul>
     </nav>
   </header>
-  <h2 class="titulosSeccion" id="register-plant-title" >Registrar planta</h2>
+  <h2 class="titulosSeccion" id="register-anuncio-title" >Crear anuncio</h2>
   <main>
   
-    <form class="register-plant-form-container" id="register-plant-form" onsubmit="return false;" > 
+    <form class="register-anuncio-form-container" id="register-anuncio-form" onsubmit="return false;" > 
       <span style="display:flex; justify-content: space-between;">
         <label for="family">Familia</label>
         <a href="#" id="add-new-family">Agregar Familia</a>
@@ -59,7 +58,7 @@
       <input type="file" id="image" name="image" accept="image/png, image/jpg, image/jpeg"/>
       <div id="display-image"></div>
       
-      <button type="submit" class="submit-button-plant" id="new-plant-submit">Guardar</button>
+      <button type="submit" class="submit-button-anuncio" id="new-anuncio-submit">Guardar</button>
     </form>
     
 
@@ -92,29 +91,29 @@
         <option value="mediano">Mediano</option>
         <option value="poco">Poco</option>
       </select>
-      <button type="submit" class="submit-button-plant" id="new-family-submit">Guardar</button>
+      <button type="submit" class="submit-button-anuncio" id="new-family-submit">Guardar</button>
     </form>
   </main>
 
 
 
-  <main class="new-plant-container" id="new-plant-card">
-    <div class="new-plant-inner-container">
-      <img src="/img/limonero.jpeg" class="new-plant-image" id="new-plant-image"/>
+  <main class="new-anuncio-container" id="new-anuncio-card">
+    <div class="new-anuncio-inner-container">
+      <img src="/img/limonero.jpeg" class="new-anuncio-image" id="new-anuncio-image"/>
       <div class="details-container">
-          <p class="new-plant-family" id="new-plant-family">Familia : </p>
-          <p class="new-plant-common-name" id="new-plant-common-name">Nombre comun : </p>
+          <p class="new-anuncio-family" id="new-anuncio-family">Familia : </p>
+          <p class="new-anuncio-common-name" id="new-anuncio-common-name">Nombre comun : </p>
           <br>
           <p>Ubicacion</p>
           <br>
-          <p class="new-plant-section" id="new-plant-section">Seccion : </p>
-          <p class="new-plant-section-row" id="new-plant-section-row">Fila : </p>
-          <p class="new-plant-section-clomun" id="new-plant-section-column">Columna : </p>
+          <p class="new-anuncio-section" id="new-anuncio-section">Seccion : </p>
+          <p class="new-anuncio-section-row" id="new-anuncio-section-row">Fila : </p>
+          <p class="new-anuncio-section-clomun" id="new-anuncio-section-column">Columna : </p>
       </div>
     </div>
 </main>
 
-<script src="../js/plantaNueva.js"></script>
+<script src="../js/anuncioNueva.js"></script>
 
 
 
@@ -128,8 +127,7 @@
   
 
   
-  <script src="./../js/plants.js"></script>
+  <script src="./../js/anuncios.js"></script>
   <script src="./../js/Util.js"></script>
-  <script src="../js/crearPlanta.js"></script>
 </body>
 </html>
