@@ -1,0 +1,37 @@
+.container-top {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: -10px;
+}
+
+/* .row {
+    display: inline-flexbox;
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+} */
+
+.articulo {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    transform: scale(0.7);
+}
+
+.articulo img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    transform: scale(0.7);
+    margin-bottom: auto;
+}
