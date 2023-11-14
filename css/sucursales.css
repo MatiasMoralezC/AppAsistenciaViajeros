@@ -2,6 +2,16 @@ html {
     font-size: 1.4rem;
 }
 
+.titulosSeccion {
+    padding: 1%;
+}
+
+#descripcion {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
 #flexbox {
     display: flex;
     flex-direction: row;
@@ -9,7 +19,7 @@ html {
 
 #buttonsContainer {
     display: flex;
-    margin-left: 47em;
+    margin-left: 67%;
 }
 
 @media (max-width: 600px) {
@@ -18,8 +28,9 @@ html {
     }
 }
 
+/* Comercios */
 #sucursalesContainer {
-    width: 20%;
+    width: 16%;
     border-style: outset;
     border-width: 5px;
 }
@@ -31,7 +42,7 @@ html {
 }
 
 #mostrarSucursales {
-    width: 48.8%;
+    width: 40%;
     padding: 0.3rem;
     display: block;
 }
@@ -60,8 +71,10 @@ html {
     font-size: 1rem;
 }
 
+/* Centros */
+
 #centrosContainer {
-    width: 20%;
+    width: 15.3%;
     border-style: outset;
     border-width: 5px;
 }
@@ -73,7 +86,7 @@ html {
 }
 
 #mostrarCentros {
-    width: 48.8%;
+    width: 40%;
     padding: 0.3rem;
     display: block;
 
@@ -94,6 +107,46 @@ html {
 }
 
 #listaCentros li button:hover {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    background-color: rgba(255, 143, 0, 0.37);
+}
+
+/* Eventos */
+
+#eventosContainer {
+    width: 15.3%;
+    border-style: outset;
+    border-width: 5px;
+}
+
+@media (max-width: 600px) {
+    #eventosContainer {
+        width: 100%;
+    }
+}
+
+#mostrarEventos {
+    width: 40%;
+    padding: 0.3rem;
+    display: block;
+}
+
+#mostrarEventos:hover {
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .2s ease-out;
+    background-color: rgba(255, 143, 0, 0.37);
+}
+
+#listaEventos li button {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#listaEventos li button:hover {
     cursor: pointer;
     transition: all .2s ease-out;
     background-color: rgba(255, 143, 0, 0.37);

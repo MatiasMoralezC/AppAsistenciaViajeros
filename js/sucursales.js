@@ -38,7 +38,7 @@ const sucursales = [
 
 const movilesYCentros = [
   {
-    ubicacion: { lat: -34.534107,  lon: -58.703193 },
+    ubicacion: { lat: -34.534107, lon: -58.703193 },
     nombre: "Centro de Asistencia Sur",
     direccion: "Av. Ricardo Balbin 137",
     horario: "De 7:00 a 19:00",
@@ -52,10 +52,20 @@ const movilesYCentros = [
     tel: '1123445568'
   },
   {
-    ubicacion: { lat: -34.532461, lon: -58.747858 },  
+    ubicacion: { lat: -34.532461, lon: -58.747858 },
     nombre: "Movil de Asistencia 1",
     direccion: "Av. G. Campos 5586",
     horario: "De 9:00 a 20:00",
     tel: '1123445569'
   }
+]
+
+const eventos = [
+  {
+    ubicacion: { lat: -34.521692, lon: -58.701168 },
+    nombre: "Show en la UNGS",
+    direccion: "Juan María Gutiérrez 1150",
+    horario: "De 18:00 a 22:00",
+    tel: '1144697501'
+  },
 ]

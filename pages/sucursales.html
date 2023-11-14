@@ -32,19 +32,25 @@
       <ul class="nav-list">
         <li><a href="../index.html">Home</a></li>
         <li><a href="./anuncios.html">Anuncios</a></li>
-        <li><a href="./sucursales.html">Sucursales</a></li>
+        <li><a href="./sucursales.html">Mapa</a></li>
         <li><a href="./pronostico.html">Pronostico</a></li>
         <li><a href="./crearAnuncio.html">Crear Anuncio</a></li>
       </ul>
     </nav>
   </header>
-  <h2 class="titulosSeccion">Mapa Turistico</h2>
+  <div id="header-map">
+    <h2 class="titulosSeccion">Mapa Turistico</h2>
+    <p id="descripcion">
+      Aqui se muestran los comercios, centros de asistencia y eventos turisticos de la region
+    </p>
+  </div>
   <div id="buttonsContainer">
     <button id="mostrarSucursales">Mostrar Comercios</button>
     <button id="mostrarCentros">Mostrar Centros</button>
+    <button id="mostrarEventos">Mostrar eventos</button>
   </div>
   <div id="flexbox">
-    <div id="mapContainer" style="width: 100%;height: 500px;width: 1050px; border-radius: 5px;">
+    <div id="mapContainer" style="width: 100%; margin-top: -30px; height: 500px;width: 1500px; border-radius: 5px;">
     </div>
     <div id="sucursalesContainer">
       <ul id="listaSucursales">
@@ -53,6 +59,11 @@
 
     <div id="centrosContainer">
       <ul id="listaCentros">
+      </ul>
+    </div>
+
+    <div id="eventosContainer">
+      <ul id="listaEventos">
       </ul>
     </div>
   </div>
