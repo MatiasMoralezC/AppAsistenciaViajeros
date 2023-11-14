@@ -35,3 +35,27 @@ const sucursales = [
     tel: '1123476566'
   },
 ];
+
+const movilesYCentros = [
+  {
+    ubicacion: { lat: -34.534107,  lon: -58.703193 },
+    nombre: "Centro de Asistencia Sur",
+    direccion: "Av. Ricardo Balbin 137",
+    horario: "De 7:00 a 19:00",
+    tel: '1123445566'
+  },
+  {
+    ubicacion: { lat: -34.510965, lon: -58.727132 },
+    nombre: "Centro de Asistencia Norte",
+    direccion: "Av. Arturo Umberto Illia 7201",
+    horario: "De 7:00 a 19:00",
+    tel: '1123445568'
+  },
+  {
+    ubicacion: { lat: -34.532461, lon: -58.747858 },  
+    nombre: "Movil de Asistencia 1",
+    direccion: "Av. G. Campos 5586",
+    horario: "De 9:00 a 20:00",
+    tel: '1123445569'
+  }
+]

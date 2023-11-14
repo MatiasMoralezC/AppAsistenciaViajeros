@@ -8,6 +8,7 @@ function mostrarSucursales(){
     createMap('mapContainer')
     createMapSucursales('mapContainer')
     mostrarBotonesMarkers()
+    mostrarBotonesMarkersDeCentros()
 }
 
 function createMap(nodeId) {
@@ -25,6 +26,7 @@ function createMap(nodeId) {
 window.onload = mostrarSucursales()
 function createMapSucursales(nodeId){
     sucursales.forEach( suc => createMapSucursal(nodeId, suc))
+    movilesYCentros.forEach( suc => createMapSucursal(nodeId, suc))
 }
 
 function createMapSucursal(nodeId, suc) {
@@ -44,6 +46,16 @@ function getVisibleMarkers(map) {
     return markerList;
 }
 
+/* function mostrarTodosMarkersComercios() {
+    let button = document.getElementById('mostrarSucursales')
+
+    button.onclick = function() {
+        for(let i=0;i<sucursales.length;i++){
+            markers[i].fire('click')
+        }
+    }
+} */
+
 function mostrarBotonesMarkers(){
     for(let i=0;i<sucursales.length;i++){
         var newLi = document.createElement("li");
@@ -57,12 +69,37 @@ function mostrarBotonesMarkers(){
             markers[i].fire('click')
         };
     }
-    document.getElementById('mostrarSucursales').onclick = function() {
+    /* document.getElementById('mostrarSucursales').onclick = function() {
         if(document.getElementById('sucursalesContainer').style.display === 'none'){
             document.getElementById('sucursalesContainer').style.display = ''
         }else{
             document.getElementById('sucursalesContainer').style.display = 'none'
         }
         
-    }
+    } */
 }
+
+function mostrarBotonesMarkersDeCentros(){
+    for(let i=0;i<movilesYCentros.length;i++){
+        var newLi = document.createElement("li");
+        var newButton = document.createElement("button");
+        var newContent = document.createTextNode(movilesYCentros[i].nombre);
+        newButton.appendChild(newContent);
+        newButton.style.width = '100%'
+        newLi.append(newButton)
+        document.getElementById('listaCentros').append(newLi)
+        newButton.onclick = function() {
+            markers[i].fire('click')
+        };
+    }
+    /* document.getElementById('mostrarCentros').onclick = function() {
+        if(document.getElementById('centrosContainer').style.display === 'none'){
+            document.getElementById('centrosContainer').style.display = ''
+        }else{
+            document.getElementById('centrosContainer').style.display = 'none'
+        }
+        
+    } */
+}
+
+/* mostrarTodosMarkersComercios() */

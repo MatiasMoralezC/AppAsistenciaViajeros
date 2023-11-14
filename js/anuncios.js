@@ -8,7 +8,7 @@ const anuncios = [
         comercio: "Floreria Bob",
         comercioId: 1,
         categoria: "Botanica",
-        descripcion: "es una plantaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        descripcion: "Anuncio disponible en la region",
         disponible: true
     },
 ]

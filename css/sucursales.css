@@ -7,6 +7,11 @@ html {
     flex-direction: row;
 }
 
+#buttonsContainer {
+    display: flex;
+    margin-left: 47em;
+}
+
 @media (max-width: 600px) {
     #flexbox {
         flex-direction: column;
@@ -19,26 +24,23 @@ html {
     border-width: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 100px) {
     #sucursalesContainer {
-       width: 100%;
+        width: 100%;
     }
 }
 
 #mostrarSucursales {
-    width: 17%;
+    width: 48.8%;
     padding: 0.3rem;
     display: block;
-    margin-left: auto;
-    margin-right: 0;
-   
 }
 
 #mostrarSucursales:hover {
     cursor: pointer;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     transition: all .2s ease-out;
-     background-color: rgba(255, 143, 0, 0.37);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .2s ease-out;
+    background-color: rgba(255, 143, 0, 0.37);
 }
 
 #listaSucursales li button {
@@ -51,9 +53,48 @@ html {
 #listaSucursales li button:hover {
     cursor: pointer;
     transition: all .2s ease-out;
-background-color: rgba(255, 143, 0, 0.37);
+    background-color: rgba(255, 143, 0, 0.37);
 }
 
 .leaflet-popup-content {
     font-size: 1rem;
+}
+
+#centrosContainer {
+    width: 20%;
+    border-style: outset;
+    border-width: 5px;
+}
+
+@media (max-width: 600px) {
+    #centrosContainer {
+        width: 100%;
+    }
+}
+
+#mostrarCentros {
+    width: 48.8%;
+    padding: 0.3rem;
+    display: block;
+
+}
+
+#mostrarCentros:hover {
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .2s ease-out;
+    background-color: rgba(255, 143, 0, 0.37);
+}
+
+#listaCentros li button {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#listaCentros li button:hover {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    background-color: rgba(255, 143, 0, 0.37);
 }
