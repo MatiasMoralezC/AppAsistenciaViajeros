@@ -8,6 +8,13 @@ for (const p of anuncios) {
 
 let anunciosToShow = anuncios
 
+function redirectToAnuncio(){
+    sessionStorage.clear()
+    let an = anuncios.find(e=>e.id==$("#anuncioId").text())
+    sessionStorage.setItem("anuncio", JSON.stringify(an))
+    window.location.href = './anuncio.html'
+}
+
 const laodCatalog = () => {
     let tableData = document.getElementById('table-catalog')
     let table = `<table data-toggle="table" id="table-catalog">
@@ -23,11 +30,12 @@ const laodCatalog = () => {
     `
 
     anunciosToShow.forEach((anuncio, i) => {
-        table = table + `<tr>
+        table = table + `<tr onClick="redirectToAnuncio()">
         <td><img class="imgAnuncios"  src="${anuncio.imgSrc}" /></td>
         <td>${anuncio.productoNombre}</td>
         <td>${anuncio.comercio}</td>
         <td>${anuncio.categoria}</td>
+        <td id="anuncioId" hidden>${anuncio.id}</td>
     </tr>`
     })
 
