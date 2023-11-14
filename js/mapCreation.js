@@ -39,8 +39,17 @@ function createMapSucursal(nodeId, suc) {
 }
 
 function createMapCentro(nodeId, cen) {
+    let greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      }); //icono personalizado para los centros y moviles
+
     let coordenadas = [cen.ubicacion.lat, cen.ubicacion.lon];
-    let marker = L.marker(coordenadas).addTo(myMap)
+    let marker = L.marker(coordenadas, {icon: greenIcon}).addTo(myMap)
     .bindPopup(`${cen.nombre}<br/><span class="depDir">${cen.direccion}</span><br/><span class="depHor">${cen.horario}</br></span><span class="depHor">${cen.tel}</span>`,  {closeOnClick: true, autoClose: false}); 
     markersCentros.push(marker)
 }
