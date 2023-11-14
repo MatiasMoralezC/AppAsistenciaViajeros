@@ -3,7 +3,9 @@
  */
 
 var myMap;
-var markers = [];
+var markersComercios = [];
+var markersCentros = [];
+
 function mostrarSucursales(){
     createMap('mapContainer')
     createMapSucursales('mapContainer')
@@ -26,14 +28,21 @@ function createMap(nodeId) {
 window.onload = mostrarSucursales()
 function createMapSucursales(nodeId){
     sucursales.forEach( suc => createMapSucursal(nodeId, suc))
-    movilesYCentros.forEach( suc => createMapSucursal(nodeId, suc))
+    movilesYCentros.forEach( cen => createMapCentro(nodeId, cen))
 }
 
 function createMapSucursal(nodeId, suc) {
     let coordenadas = [suc.ubicacion.lat, suc.ubicacion.lon];
     let marker = L.marker(coordenadas).addTo(myMap)
-    .bindPopup(`${suc.nombre}<br/><span class="depDir">${suc.direccion}</span><br/><span class="depHor">${suc.horario}</br></span><span class="depHor">${suc.tel}</span>`); 
-    markers.push(marker)
+    .bindPopup(`${suc.nombre}<br/><span class="depDir">${suc.direccion}</span><br/><span class="depHor">${suc.horario}</br></span><span class="depHor">${suc.tel}</span>`,  {closeOnClick: true, autoClose: false}); 
+    markersComercios.push(marker)
+}
+
+function createMapCentro(nodeId, cen) {
+    let coordenadas = [cen.ubicacion.lat, cen.ubicacion.lon];
+    let marker = L.marker(coordenadas).addTo(myMap)
+    .bindPopup(`${cen.nombre}<br/><span class="depDir">${cen.direccion}</span><br/><span class="depHor">${cen.horario}</br></span><span class="depHor">${cen.tel}</span>`,  {closeOnClick: true, autoClose: false}); 
+    markersCentros.push(marker)
 }
 
 function getVisibleMarkers(map) {
@@ -46,15 +55,25 @@ function getVisibleMarkers(map) {
     return markerList;
 }
 
-/* function mostrarTodosMarkersComercios() {
+function mostrarTodosMarkersComercios() {
     let button = document.getElementById('mostrarSucursales')
 
     button.onclick = function() {
         for(let i=0;i<sucursales.length;i++){
-            markers[i].fire('click')
-        }
+            markersComercios[i].openPopup()
+        } 
     }
-} */
+}
+
+function mostrarTodosMarkersCentros() {
+    let button = document.getElementById('mostrarCentros')
+
+    button.onclick = function() {
+        for(let i=0;i<movilesYCentros.length;i++){
+            markersCentros[i].openPopup()
+        } 
+    }
+}
 
 function mostrarBotonesMarkers(){
     for(let i=0;i<sucursales.length;i++){
@@ -66,7 +85,7 @@ function mostrarBotonesMarkers(){
         newLi.append(newButton)
         document.getElementById('listaSucursales').append(newLi)
         newButton.onclick = function() {
-            markers[i].fire('click')
+            markersComercios[i].fire('click')
         };
     }
     /* document.getElementById('mostrarSucursales').onclick = function() {
@@ -89,7 +108,7 @@ function mostrarBotonesMarkersDeCentros(){
         newLi.append(newButton)
         document.getElementById('listaCentros').append(newLi)
         newButton.onclick = function() {
-            markers[i].fire('click')
+            markersComercios[i].fire('click')
         };
     }
     /* document.getElementById('mostrarCentros').onclick = function() {
@@ -102,4 +121,5 @@ function mostrarBotonesMarkersDeCentros(){
     } */
 }
 
-/* mostrarTodosMarkersComercios() */
+mostrarTodosMarkersComercios()
+mostrarTodosMarkersCentros()
