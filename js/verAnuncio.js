@@ -7,6 +7,7 @@ document.getElementById('titulo').innerText = anuncio.productoNombre
 createMap('mapContainer')
 
 function mostrarMapa(){
+
     if( $("#mapContainer").is(":visible")){
         $("#mapContainer").hide()
     }else{
