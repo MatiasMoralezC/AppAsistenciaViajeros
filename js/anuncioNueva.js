@@ -1,18 +1,19 @@
-
 //title
 const title = document.getElementById('register-anuncio-title')
 
-
-//Families for select
-const selectFamily = document.getElementById('family')
-const families = new Set(anuncios.map(anuncio => anuncio.categoria.toLowerCase()))
-const addOptions = () => {
-    families.
-    forEach(family => {
-        selectFamily.appendChild(createElementFromHTML(`<option value="${family}">${family}</option>`))
+//tipo de anuncio
+document.getElementsByName("tipoPublicacion").forEach(element => {
+    element.addEventListener("change", () => {
+      if(element.value == "articulo"){
+        document.getElementById("subFormArticulo").style.display = "block";
+        document.getElementById("subFormServicio").style.display = "none";
+      }
+      else{
+        document.getElementById("subFormArticulo").style.display = "none";
+        document.getElementById("subFormServicio").style.display = "block";
+      }
     })
-}
-addOptions()
+  })
 
 //read photo
 const imageInput = document.querySelector("#image");
