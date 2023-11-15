@@ -32,7 +32,7 @@ const laodCatalog = () => {
 
     anunciosToShow.forEach((anuncio, i) => {
         table = table + `<tr onClick="redirectToAnuncio()">
-        <td><img class="imgAnuncios"  src="${anuncio.imgSrc}" /></td>
+        <td><img class="imgAnuncios"  src="${anuncio.imgSrc[0]}" /></td>
         <td>${anuncio.productoNombre}</td>
         <td>${anuncio.comercio}</td>
         <td>${anuncio.categoria}</td>

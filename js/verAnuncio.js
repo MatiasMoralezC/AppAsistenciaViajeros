@@ -1,10 +1,13 @@
 var anuncio = JSON.parse(sessionStorage.getItem("anuncio"));
-document.getElementById('img1').src = anuncio.imgSrc
-document.getElementById('img2').src = anuncio.imgSrc2
-document.getElementById('img3').src = anuncio.imgSrc3
+document.getElementById('img1').src = anuncio.imgSrc[0]
+document.getElementById('img2').src = anuncio.imgSrc[1]
+document.getElementById('img3').src = anuncio.imgSrc[2]
 document.getElementById('descripcion').innerText = anuncio.descripcion
 document.getElementById('titulo').innerText = anuncio.productoNombre
 createMap('mapContainer')
+window.onload = function(){
+    $("#mapContainer").hide()
+}
 
 function mostrarMapa(){
     if( $("#mapContainer").is(":visible")){

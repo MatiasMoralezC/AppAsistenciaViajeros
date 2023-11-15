@@ -16,59 +16,87 @@ document.getElementsByName("tipoPublicacion").forEach(element => {
   })
 
 //read photo
-const imageInput = document.querySelector("#image");
-var uploadedImage = "";
-imageInput.addEventListener("change", function() {
+const imagesInput = document.querySelector("#images");
+imagesInput.addEventListener("change", function() {
+  const displayImagesDiv = document.querySelector("#display-images");
+  displayImagesDiv.innerHTML = ""; // Clear previous images
+
+  for (let i = 0; i < this.files.length; i++) {
     const reader = new FileReader();
-    uploadedImage  = reader.result;
-    reader.readAsDataURL(this.files[0]);
+    const file = this.files[i];
+
+    reader.onload = function(event) {
+      const uploadedImage = event.target.result;
+
+      const imageDiv = document.createElement("div");
+      imageDiv.classList.add("uploaded-image");
+      imageDiv.style.backgroundImage = `url(${uploadedImage})`;
+      displayImagesDiv.appendChild(imageDiv);
+    };
+
+    reader.readAsDataURL(file);
+  }
 });
-const image_input = document.querySelector("#image")
-var uploaded_image = ""
-image_input.addEventListener("change", function() {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      uploaded_image = reader.result;
-      document.querySelector("#display-image").style.display = 'block'
-      document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
-    });
-    reader.readAsDataURL(this.files[0]);
-  });
 
 
   
 const formAnuncio = document.getElementById("register-anuncio-form");
 formAnuncio?.addEventListener("submit", (e) => {
-    e.preventDefault()
-    console.log(uploaded_image)
-    let newAnuncio = {
-        id: 2,
-        imgSrc: uploaded_image,
-        productoNombre: e.target.commonName.value,
-        descripcion: e.target.commonDescripcion.value,
-        comercio: "Floreria Bob",
-        categoria: e.target.commonCategoria.value,
-        tipoAnuncio: e.target.tipoPublicacion.value
+  e.preventDefault();
+
+  const uploadedImages = [];
+  const imagesInput = document.querySelector("#images");
+
+  if (imagesInput.files.length > 0) {
+    for (let i = 0; i < imagesInput.files.length; i++) {
+      const reader = new FileReader();
+      const file = imagesInput.files[i];
+
+      reader.onload = function (event) {
+        uploadedImages.push(event.target.result);
+
+        if (uploadedImages.length === imagesInput.files.length) {
+          createNewAnuncio(e, uploadedImages);
+        }
+      };
+
+      reader.readAsDataURL(file);
     }
+  } else {
+    createNewAnuncio(e, uploadedImages);
+  }
+});
 
-    if(newAnuncio.categoria == "servicio"){
-        newAnuncio.caracteristicas = e.target.commonCaracteristicasArticulo.value;
-        newAnuncio.stock = e.target.commonStockArticulo.value;
-    }else{
-        newAnuncio.restricciones = e.target.commonDescripcionServicio.value;
-    }
+function createNewAnuncio(e, uploadedImages) {
+  console.log(uploadedImages); // Array of uploaded images
 
-    if(anuncios == null)
-        anuncios = []
+  let newAnuncio = {
+    id: 2,
+    imgSrc: uploadedImages, // Array of image sources
+    productoNombre: e.target.commonName.value,
+    descripcion: e.target.commonDescripcion.value,
+    comercio: "Comercio de prueba",
+    categoria: e.target.commonCategoria.value,
+    tipoAnuncio: e.target.tipoPublicacion.value,
+  };
 
-    anuncios.push(newAnuncio)
-    sessionStorage.setItem("anuncios", JSON.stringify(anuncios))
-    Swal.fire(
-      'Atención!',
-      'El anuncio fue creado correctamente!',
-      'success'
-    )
-})
+  if (newAnuncio.categoria === "servicio") {
+    newAnuncio.caracteristicas = e.target.commonCaracteristicasArticulo.value;
+    newAnuncio.stock = e.target.commonStockArticulo.value;
+  } else {
+    newAnuncio.restricciones = e.target.commonDescripcionServicio.value;
+  }
+
+  let anuncios = JSON.parse(sessionStorage.getItem("anuncios")) || [];
+  anuncios.push(newAnuncio);
+  sessionStorage.setItem("anuncios", JSON.stringify(anuncios));
+
+  Swal.fire(
+    'Atención!',
+    'El anuncio fue creado correctamente!',
+    'success'
+  );
+}
 
 
 /*
