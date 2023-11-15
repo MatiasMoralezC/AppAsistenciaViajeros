@@ -1,4 +1,4 @@
-const anuncios = [
+/*const anuncios = [
     {
         id: 1,
         imgSrc: "../img/mexicanFlame.jpg",
@@ -11,6 +11,8 @@ const anuncios = [
         descripcion: "Anuncio disponible en la region",
         disponible: true
     },
-]
+]*/
+
+let anuncios = JSON.parse(sessionStorage.getItem("anuncios"));
 
 

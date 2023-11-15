@@ -9,7 +9,8 @@ for (const p of anuncios) {
 let anunciosToShow = anuncios
 
 function redirectToAnuncio(){
-    sessionStorage.clear()
+    //sessionStorage.clear()
+    sessionStorage.setItem("anuncio", null)
     let an = anuncios.find(e=>e.id==$("#anuncioId").text())
     sessionStorage.setItem("anuncio", JSON.stringify(an))
     window.location.href = './anuncio.html'

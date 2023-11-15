@@ -35,6 +35,43 @@ image_input.addEventListener("change", function() {
     reader.readAsDataURL(this.files[0]);
   });
 
+
+  
+const formAnuncio = document.getElementById("register-anuncio-form");
+formAnuncio?.addEventListener("submit", (e) => {
+    e.preventDefault()
+    console.log(uploaded_image)
+    let newAnuncio = {
+        id: 2,
+        imgSrc: uploaded_image,
+        productoNombre: e.target.commonName.value,
+        descripcion: e.target.commonDescripcion.value,
+        comercio: "Floreria Bob",
+        categoria: e.target.commonCategoria.value,
+        tipoAnuncio: e.target.tipoPublicacion.value
+    }
+
+    if(newAnuncio.categoria == "servicio"){
+        newAnuncio.caracteristicas = e.target.commonCaracteristicasArticulo.value;
+        newAnuncio.stock = e.target.commonStockArticulo.value;
+    }else{
+        newAnuncio.restricciones = e.target.commonDescripcionServicio.value;
+    }
+
+    if(anuncios == null)
+        anuncios = []
+
+    anuncios.push(newAnuncio)
+    sessionStorage.setItem("anuncios", JSON.stringify(anuncios))
+    Swal.fire(
+      'Atención!',
+      'El anuncio fue creado correctamente!',
+      'success'
+    )
+})
+
+
+/*
 //Process new anuncio form
 const newPlantForm = document.getElementById('register-anuncio-form')
 const newPlantCard = document.getElementById('new-anuncio-card')
@@ -111,7 +148,7 @@ newFamilyForm.addEventListener('submit', (e) => {
     
 })
 
-
+*/
 //Go to new anuncio
 /* const newPlantSubmit = document.getElementById('new-anuncio-submit')
 newPlantSubmit?.addEventListener('click', (e) => {

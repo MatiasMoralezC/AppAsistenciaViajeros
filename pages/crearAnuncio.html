@@ -31,21 +31,21 @@
       <label for="commonName">Nombre:</label>
       <input type="text" id="commonName" name="commonName" required />
 
-      <label for="commonName">Descripción:</label>
+      <label for="commonDescripcion">Descripción:</label>
       <textarea type="text" id="commonDescripcion" name="commonDescripcion" required /></textarea>
 
       <label for="section">Categoría:</label>
-      <select name="section" id="section" required>
-        <option value="section 1">Indumentaria</option>
-        <option value="section 2">Cosmetica</option>
-        <option value="section 3">Moda y Accesorios</option>
-        <option value="section 4">Hogar y Decoración</option>
-        <option value="section 5">Alimentación y Bebidas</option>
-        <option value="section 6">Deportes y Aire Libre</option>
-        <option value="section 7">Juguetes y Entretenimiento</option>
-        <option value="section 8">Arte y Artesanía/option>
-        <option value="section 9">Electrónica y Tecnología</option>
-        <option value="section 10">Automotriz y Accesorios para Vehículos</option>
+      <select name="section" id="commonCategoria" required>
+        <option value="Indumentaria">Indumentaria</option>
+        <option value="Cosmetica">Cosmetica</option>
+        <option value="Moda y Accesorios">Moda y Accesorios</option>
+        <option value="Hogar y Decoración">Hogar y Decoración</option>
+        <option value="Alimentación y Bebidas">Alimentación y Bebidas</option>
+        <option value="sDeportes y Aire Libre">Deportes y Aire Libre</option>
+        <option value="Juguetes y Entretenimiento">Juguetes y Entretenimiento</option>
+        <option value="Arte y Artesanía">Arte y Artesanía</option>
+        <option value="Electrónica y Tecnología">Electrónica y Tecnología</option>
+        <option value="Automotriz y Accesorios para Vehículos">Automotriz y Accesorios para Vehículos</option>
       </select>
 
       <label>
@@ -58,17 +58,16 @@
       <div id="subFormArticulo">
         <label for="commonName">Caracteristicas:</label><br>
         <textarea type="text" id="commonCaracteristicasArticulo" name="commonCaracteristicasArticulo"
-          style="width:100%;" required /></textarea>
+          style="width:100%;"></textarea>
         <br>
         <label for="commonName">Stock:</label>
-        <input type="checkbox" id="commonStockArticulo" name="commonStockArticulo" required />
+        <input type="checkbox" id="commonStockArticulo" name="commonStockArticulo" />
       </div>
 
       <!--Servicios inputs-->
       <div style="display:none" id="subFormServicio">
         <label for="commonName">Restricciones:</label><br>
-        <textarea type="text" id="commonDescripcionServicio" name="commonDescripcionServicio" style="width:100%;"
-          required /></textarea>
+        <textarea type="text" id="commonDescripcionServicio" name="commonDescripcionServicio" style="width:100%;"></textarea>
       </div>
 
       <label for="image">Imagen</label>
@@ -77,59 +76,8 @@
 
       <button type="submit" class="submit-button-anuncio" id="new-anuncio-submit">Guardar</button>
     </form>
-
-
-
-    <form class="register-family-form-container" id="register-family-form" onsubmit="return false;">
-      <img src="../img/backArrow.svg" class="back-arrow" id="back-arrow" />
-      <label for="newFamilyFamily">Nueva familia</label>
-      <input type="text" id="newFamilyFamily" name="newFamilyFamily" />
-
-      <label for="familyScientificName">Nombre cientifico</label>
-      <input type="text" id="familyScientificName" name="familyScientificName" />
-
-      <label for="familyMainColor">Color principal</label>
-      <input type="text" id="familyMainColor" name="familyMainColor" />
-
-
-      <label for="typeOfSoil">Tipo de suelo</label>
-      <select name="typeOfSoil" id="typeOfSoil">
-        <option value="acido">Ácido</option>
-        <option value="neutro">Neutro</option>
-        <option value="basico">Básico</option>
-      </select>
-
-      <label for="tempeture">Temperatura</label>
-      <input type="number" id="tempeture" name="tempeture" />
-
-      <label for="irrigationCycle">Riego</label>
-      <select name="irrigationCycle" id="irrigationCycle">
-        <option value="mucho">Mucho</option>
-        <option value="mediano">Mediano</option>
-        <option value="poco">Poco</option>
-      </select>
-      <button type="submit" class="submit-button-anuncio" id="new-family-submit">Guardar</button>
-    </form>
   </main>
-
-
-
-  <main class="new-anuncio-container" id="new-anuncio-card">
-    <div class="new-anuncio-inner-container">
-      <img src="/img/limonero.jpeg" class="new-anuncio-image" id="new-anuncio-image" />
-      <div class="details-container">
-        <p class="new-anuncio-family" id="new-anuncio-family">Familia : </p>
-        <p class="new-anuncio-common-name" id="new-anuncio-common-name">Nombre comun : </p>
-        <br>
-        <p>Ubicacion</p>
-        <br>
-        <p class="new-anuncio-section" id="new-anuncio-section">Seccion : </p>
-        <p class="new-anuncio-section-row" id="new-anuncio-section-row">Fila : </p>
-        <p class="new-anuncio-section-clomun" id="new-anuncio-section-column">Columna : </p>
-      </div>
-    </div>
-  </main>
-
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./../js/anuncios.js"></script>
   <script src="../js/anuncioNueva.js"></script>
 
