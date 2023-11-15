@@ -12,6 +12,7 @@ html{
     min-width: 100%;
     min-height: 50px;
     justify-content: space-between;
+    background-color: #9ED2C6;
   }
   .footer-social-media {
     display: flex;

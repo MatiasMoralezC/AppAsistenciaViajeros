@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/normalize.css">
@@ -7,10 +8,11 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/catalogo.css">
   <title>Anuncios</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.css">
-</header>
+  </header>
 
 <body>
   <header class="header-container">
@@ -26,33 +28,41 @@
     </nav>
   </header>
 
-<h2 class="titulosSeccion" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Anuncios</h2>
-<div class="filt-fiv">
-  <label for="filter" class="label-filter" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">Filtrar</label>
-  <input type="text" id="filter" class="filter-input"/>
-</div>
-<table data-toggle="table" id="table-catalog">
+  <main id="anuncios-container">
+    <h2 class="titulosSeccion" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+      Anuncios</h2>
+    <div class="filt-fiv">
+      <label for="filter" class="label-filter"
+        style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; ">Filtrar</label>
+      <input type="text" id="filter" class="filter-input" style="background-color: #F6F1EE;" />
+    </div>
+    <table data-toggle="table" id="table-catalog">
 
-</table>
+    </table>
+
+  </main>
 
 
-<footer class="footer-container">
-  <span class="footer-social-media">
-    <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon"/>
-    <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon"/>
-  </span>
-  <h6 class="copyright-footer">© 2023 Copyright: Grupo 1 </h6>
-</footer>
+  <footer class="footer-container">
+    <span class="footer-social-media">
+      <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon" />
+      <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon" />
+    </span>
+    <h6 class="copyright-footer">© 2023 Copyright: Grupo 1 </h6>
+  </footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
 
-  
+
   <script src="./../js/anuncios.js"></script>
   <script src="./../js/catalogo.js"></script>
   <script src="./../js/comercios.js"></script>
 
 </body>
+
 </html>

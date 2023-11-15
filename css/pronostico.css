@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f7ecde;
 }
 
 .left-block {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Pronostico</title>
@@ -8,65 +9,67 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/pronostico.css">
 </head>
+
 <body>
-<header class="header-container">
-  <h1 class="header-title">Asistencia al viajero</h1>
-  <nav class="nav-container">
-    <ul class="nav-list">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="./anuncios.html">Anuncios</a></li>
-      <li><a href="./sucursales.html">Mapa</a></li>
-      <li><a href="./pronostico.html">Pronostico</a></li>
-      <li><a href="./crearAnuncio.html">Crear Anuncio</a></li>
-    </ul>
-  </nav>
-</header>
-<h2 class="titulosSeccion" >Pronostico</h2>
-<main class="forecast-main-container">
+  <header class="header-container">
+    <h1 class="header-title">Asistencia al viajero</h1>
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./anuncios.html">Anuncios</a></li>
+        <li><a href="./sucursales.html">Mapa</a></li>
+        <li><a href="./pronostico.html">Pronostico</a></li>
+        <li><a href="./crearAnuncio.html">Crear Anuncio</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="forecast-main-container">
+    <h2 class="titulosSeccion">Pronostico</h2>
+    <div class="left-block" style="background-color: #F6F1EE;">
 
-  <div class="left-block">
-    
-    <div class="sun-container">
-      <img id="image"/>
-    </div>
+      <div class="sun-container">
+        <img id="image" />
+      </div>
 
-    <div class="forecast-info">
-      <h2 class="location" id="location"></h2>
-      <div class="forecast-details-container">
-        <span class="forecast-detail-item">Temperatura: <p id="tempeture"> </p></span>
-        <span class="forecast-detail-item">Temperatura min: <p id="min-tempeture"></p></span>
-        <span class="forecast-detail-item">Velocidad viento:  <p id="wind_speed"> </p> </span>
-        <span class="forecast-detail-item">Direccion viento:  <p id="wind_deg"> </p> </span>
-        <span class="forecast-detail-item">Humedad:  <p id="humidity">  </p> </span>
-        <span class="forecast-detail-item">Presion:  <p id="pressure"></p> </span>
-        <span class="forecast-detail-item">Visibilidad:  <p id="visibility"></p> </span>
-        <span class="forecast-detail-item">Descripcion:  <p id="description"></p> </span>
+      <div class="forecast-info">
+        <h2 class="location" id="location"></h2>
+        <div class="forecast-details-container">
+          <span class="forecast-detail-item">Temperatura: <p id="tempeture"> </p></span>
+          <span class="forecast-detail-item">Temperatura min: <p id="min-tempeture"></p></span>
+          <span class="forecast-detail-item">Velocidad viento: <p id="wind_speed"> </p> </span>
+          <span class="forecast-detail-item">Direccion viento: <p id="wind_deg"> </p> </span>
+          <span class="forecast-detail-item">Humedad: <p id="humidity"> </p> </span>
+          <span class="forecast-detail-item">Presion: <p id="pressure"></p> </span>
+          <span class="forecast-detail-item">Visibilidad: <p id="visibility"></p> </span>
+          <span class="forecast-detail-item">Descripcion: <p id="description"></p> </span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <h1 class="forecast-extend-title">Pronostico extendido</h1>
-  <div class="extend-forecast-container" id="extend-forecast-main-container">
-  </div>
+    <h1 class="forecast-extend-title">Pronostico extendido</h1>
+    <div class="extend-forecast-container" id="extend-forecast-main-container">
+    </div>
 
-  <h1 class="alerts-title">Proximas alertas</h1>
- 
-  <div class="alerts-main-container" id="alerts-main-container">
- 
-  </div>
+    <h1 class="alerts-title">Proximas alertas</h1>
 
-</main>
+    <div class="alerts-main-container" id="alerts-main-container">
 
-<footer class="footer-container">
-  <span class="footer-social-media">
-    <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon"/>
-    <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon"/>
-  </span>
-  <h6 class="copyright-footer">© 2023 Copyright: Grupo 1 </h6>
- 
-</footer>
+    </div>
 
-<script src="./../js/Util.js"></script>
-<script src="./../js/climaService.js"></script>
+  </main>
+
+  <footer class="footer-container">
+    <span class="footer-social-media">
+      <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon" />
+      <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon" />
+    </span>
+    <h6 class="copyright-footer">© 2023 Copyright: Grupo 1 </h6>
+
+  </footer>
+
+  <script src="./../js/Util.js"></script>
+  <script src="./../js/climaService.js"></script>
 </body>
+
 </html>

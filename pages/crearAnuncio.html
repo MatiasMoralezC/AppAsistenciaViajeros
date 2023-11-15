@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Crear anuncio</title>
@@ -7,8 +8,9 @@
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/crearAnuncio.css">
-  <link rel="stylesheet" href="../css/anuncioNueva.css"
+  <link rel="stylesheet" href="../css/anuncioNueva.css">
 </head>
+
 <body>
 
   <header class="header-container">
@@ -23,15 +25,14 @@
       </ul>
     </nav>
   </header>
-  <h2 class="titulosSeccion" id="register-anuncio-title" >Crear anuncio</h2>
-  <main>
-  
-    <form class="register-anuncio-form-container" id="register-anuncio-form" onsubmit="return false;" > 
+  <main id="crear-anuncio-container">
+    <h2 class="titulosSeccion" id="register-anuncio-title">Crear anuncio</h2>
+    <form class="register-anuncio-form-container" id="register-anuncio-form" onsubmit="return false;">
       <label for="commonName">Nombre:</label>
-      <input type="text" id="commonName" name="commonName" required/>
+      <input type="text" id="commonName" name="commonName" required />
 
       <label for="commonName">Descripción:</label>
-      <textarea type="text" id="commonDescripcion" name="commonDescripcion" required/></textarea>
+      <textarea type="text" id="commonDescripcion" name="commonDescripcion" required /></textarea>
 
       <label for="section">Categoría:</label>
       <select name="section" id="section" required>
@@ -56,39 +57,41 @@
       <!--Articulos inputs-->
       <div id="subFormArticulo">
         <label for="commonName">Caracteristicas:</label><br>
-        <textarea type="text" id="commonCaracteristicasArticulo" name="commonCaracteristicasArticulo" style="width:100%;" required/></textarea>
+        <textarea type="text" id="commonCaracteristicasArticulo" name="commonCaracteristicasArticulo"
+          style="width:100%;" required /></textarea>
         <br>
         <label for="commonName">Stock:</label>
-        <input type="checkbox" id="commonStockArticulo" name="commonStockArticulo" required/>
+        <input type="checkbox" id="commonStockArticulo" name="commonStockArticulo" required />
       </div>
-      
+
       <!--Servicios inputs-->
       <div style="display:none" id="subFormServicio">
         <label for="commonName">Restricciones:</label><br>
-        <textarea type="text" id="commonDescripcionServicio" name="commonDescripcionServicio" style="width:100%;" required/></textarea>
+        <textarea type="text" id="commonDescripcionServicio" name="commonDescripcionServicio" style="width:100%;"
+          required /></textarea>
       </div>
 
       <label for="image">Imagen</label>
-      <input type="file" id="image" name="image" accept="image/png, image/jpg, image/jpeg"/>
+      <input type="file" id="image" name="image" accept="image/png, image/jpg, image/jpeg" />
       <div id="display-image"></div>
-      
+
       <button type="submit" class="submit-button-anuncio" id="new-anuncio-submit">Guardar</button>
     </form>
-    
 
 
-    <form class="register-family-form-container" id="register-family-form" onsubmit="return false;" > 
-      <img src="../img/backArrow.svg" class="back-arrow" id="back-arrow"/>
+
+    <form class="register-family-form-container" id="register-family-form" onsubmit="return false;">
+      <img src="../img/backArrow.svg" class="back-arrow" id="back-arrow" />
       <label for="newFamilyFamily">Nueva familia</label>
       <input type="text" id="newFamilyFamily" name="newFamilyFamily" />
-      
+
       <label for="familyScientificName">Nombre cientifico</label>
       <input type="text" id="familyScientificName" name="familyScientificName" />
 
       <label for="familyMainColor">Color principal</label>
       <input type="text" id="familyMainColor" name="familyMainColor" />
 
-  
+
       <label for="typeOfSoil">Tipo de suelo</label>
       <select name="typeOfSoil" id="typeOfSoil">
         <option value="acido">Ácido</option>
@@ -97,7 +100,7 @@
       </select>
 
       <label for="tempeture">Temperatura</label>
-      <input type="number" id="tempeture" name="tempeture"/>
+      <input type="number" id="tempeture" name="tempeture" />
 
       <label for="irrigationCycle">Riego</label>
       <select name="irrigationCycle" id="irrigationCycle">
@@ -113,34 +116,35 @@
 
   <main class="new-anuncio-container" id="new-anuncio-card">
     <div class="new-anuncio-inner-container">
-      <img src="/img/limonero.jpeg" class="new-anuncio-image" id="new-anuncio-image"/>
+      <img src="/img/limonero.jpeg" class="new-anuncio-image" id="new-anuncio-image" />
       <div class="details-container">
-          <p class="new-anuncio-family" id="new-anuncio-family">Familia : </p>
-          <p class="new-anuncio-common-name" id="new-anuncio-common-name">Nombre comun : </p>
-          <br>
-          <p>Ubicacion</p>
-          <br>
-          <p class="new-anuncio-section" id="new-anuncio-section">Seccion : </p>
-          <p class="new-anuncio-section-row" id="new-anuncio-section-row">Fila : </p>
-          <p class="new-anuncio-section-clomun" id="new-anuncio-section-column">Columna : </p>
+        <p class="new-anuncio-family" id="new-anuncio-family">Familia : </p>
+        <p class="new-anuncio-common-name" id="new-anuncio-common-name">Nombre comun : </p>
+        <br>
+        <p>Ubicacion</p>
+        <br>
+        <p class="new-anuncio-section" id="new-anuncio-section">Seccion : </p>
+        <p class="new-anuncio-section-row" id="new-anuncio-section-row">Fila : </p>
+        <p class="new-anuncio-section-clomun" id="new-anuncio-section-column">Columna : </p>
       </div>
     </div>
-</main>
+  </main>
 
   <script src="./../js/anuncios.js"></script>
   <script src="../js/anuncioNueva.js"></script>
-  
+
 
 
   <footer class="footer-container">
     <span class="footer-social-media">
-      <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon"/>
-      <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon"/>
+      <img src="./../img/facebook.svg" alt="facebook" class="social-media-icon" />
+      <img src="./../img/instagram.svg" alt="instagram" class="social-media-icon" />
     </span>
     <h6 class="copyright-footer">© 2023 Copyright: Grupo 1 </h6>
   </footer>
-  
-  
+
+
   <script src="./../js/Util.js"></script>
 </body>
+
 </html>
