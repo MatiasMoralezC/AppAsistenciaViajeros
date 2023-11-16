@@ -66,10 +66,11 @@ const filterCatalog = (word) => {
 }
 const filterInput = document.getElementById('filter')
 let toFilter = ""
-filterInput.addEventListener('keyup', (e) => {
+filterInput.addEventListener('keydown', (e) => {
+    var keycode = (e.keyCode ? e.keyCode : e.which);
     if (e.key == "Backspace") {
         if (toFilter !== "") toFilter = toFilter.slice(0, toFilter.length - 1)
-    } else {
+    } else if(keycode != 13){
         toFilter = toFilter + e.key.toLocaleLowerCase()
     }
     filterCatalog(toFilter)
