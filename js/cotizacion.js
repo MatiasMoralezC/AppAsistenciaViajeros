@@ -13,7 +13,7 @@ const main = async () => {
                 <h5 class="location" id="location">${cot.casa.nombre}</h5>
                 <div class="forecast-details-container">
                     <p>Compra: $${cot.casa.compra}</p>
-                    <p>Venta: $${cot.casa.compra}</p>
+                    <p>Venta: $${cot.casa.venta}</p>
                 </div>
             </div>
         `
@@ -31,7 +31,7 @@ const main = async () => {
                 <h5 class="location" id="location">${cot.casa.nombre}</h5>
                 <div class="forecast-details-container">
                     <p>Compra: $${cot.casa.compra}</p>
-                    <p>Venta: $${cot.casa.compra}</p>
+                    <p>Venta: $${cot.casa.venta}</p>
                 </div>
             </div>
         `
