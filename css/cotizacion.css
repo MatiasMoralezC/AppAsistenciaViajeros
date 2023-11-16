@@ -1,0 +1,42 @@
+.cotizacion{
+  padding: 5%;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: small;
+  width: 20%;
+  height: 20%;
+}
+
+.contenedor-cotizaciones{
+    display: flex;
+}
+
+.cotizacion h5{
+    font-size: 20px;
+}
+
+#cotizacion-main-dolar{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#cotizacion-main-otros{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 610px) {
+    .contenedor-cotizaciones{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 280px) {
+    .cotizacion {
+        width: 80%;
+        height: 20%;
+    }
+}
